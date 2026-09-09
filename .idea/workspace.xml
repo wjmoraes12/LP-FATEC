@@ -36,23 +36,28 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "js.buildTools.grunt.grunt-cli.package": "",
     "js.buildTools.gulp.gulp_package_dir": "",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/wjmoraes12/Projetos/Adriana/LP-FATEC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "",
     "nodejs.mocha.mocha_node_package_dir": "",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "advanced.settings",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercicios_2.Main" />
       <extension name="coverage">
@@ -142,17 +147,6 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3">
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="MicronautRunConfigurationType" factoryName="Micronaut">
-      <option name="alternativeJrePath" />
-      <option name="alternativeJrePathEnabled" value="false" />
-      <option name="mainClass" value="" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="" />
-      <option name="vmParameters" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
