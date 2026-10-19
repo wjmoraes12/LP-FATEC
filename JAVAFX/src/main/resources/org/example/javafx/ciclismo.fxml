@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" prefWidth="540" style="-fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.javafx.CiclismoController">
+
+    <Label text="Ciclismo na Trilha" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <Label text="Preencha os dados de cada aba e clique em Criar para liberar as ações."
+           wrapText="true"/>
+
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Ciclista">
+            <VBox spacing="8" style="-fx-padding: 15;">
+                <TextField fx:id="txtCiclistaNome" promptText="Nome"/>
+                <TextField fx:id="txtCiclistaNivel" promptText="Nível (ex.: iniciante)"/>
+                <TextField fx:id="txtCiclistaVelocidade" promptText="Velocidade (km/h)"/>
+                <Button text="Criar Ciclista" onAction="#onCriarCiclista"/>
+                <HBox fx:id="boxCiclista" spacing="8" disable="true">
+                    <Button text="Pedalar" onAction="#onCiclistaPedalar"/>
+                    <Button text="Frear" onAction="#onCiclistaFrear"/>
+                    <Button text="Acelerar" onAction="#onCiclistaAcelerar"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Bicicleta">
+            <VBox spacing="8" style="-fx-padding: 15;">
+                <TextField fx:id="txtBicicletaMarca" promptText="Marca"/>
+                <TextField fx:id="txtBicicletaAro" promptText="Aro (ex.: 29)"/>
+                <TextField fx:id="txtBicicletaTipoFreio" promptText="Tipo de freio (ex.: a disco)"/>
+                <Button text="Criar Bicicleta" onAction="#onCriarBicicleta"/>
+                <HBox fx:id="boxBicicleta" spacing="8" disable="true">
+                    <Button text="Pedalar" onAction="#onBicicletaPedalar"/>
+                    <Button text="Calibrar pneu" onAction="#onBicicletaCalibrarPneu"/>
+                    <Button text="Frear" onAction="#onBicicletaFrear"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Trilha">
+            <VBox spacing="8" style="-fx-padding: 15;">
+                <TextField fx:id="txtTrilhaNome" promptText="Nome da trilha"/>
+                <TextField fx:id="txtTrilhaDistancia" promptText="Distância (km)"/>
+                <TextField fx:id="txtTrilhaDificuldade" promptText="Dificuldade (ex.: média)"/>
+                <Button text="Criar Trilha" onAction="#onCriarTrilha"/>
+                <HBox fx:id="boxTrilha" spacing="8" disable="true">
+                    <Button text="Iniciar" onAction="#onTrilhaIniciar"/>
+                    <Button text="Mapear" onAction="#onTrilhaMapear"/>
+                    <Button text="Finalizar" onAction="#onTrilhaFinalizar"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+    <Label text="Resultado:"/>
+    <TextArea fx:id="txtLog" editable="false" wrapText="true" prefRowCount="8"/>
+    <Button text="Limpar" onAction="#onLimpar"/>
+</VBox>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="12" prefWidth="520" style="-fx-padding: 25;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.javafx.DescontoController">
+
+    <Label text="Compra com Desconto" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <Label text="Informe quantidade e preço de cada item (deixe em branco o que não for comprar)."
+           wrapText="true" textAlignment="CENTER"/>
+
+    <GridPane fx:id="gridProdutos" hgap="10" vgap="8" alignment="CENTER"/>
+
+    <Button text="Calcular" onAction="#onCalcular" defaultButton="true"/>
+    <Label fx:id="lblResultado" wrapText="true" textAlignment="CENTER"/>
+</VBox>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="12" prefWidth="420" style="-fx-padding: 25;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.javafx.AluguelController">
+
+    <Label text="Aluguel de Carro" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <TextField fx:id="txtDias" promptText="Quantidade de dias"/>
+    <TextField fx:id="txtKm" promptText="Quilometragem percorrida (km)"/>
+    <Button text="Calcular" onAction="#onCalcular" defaultButton="true"/>
+    <Label fx:id="lblResultado" wrapText="true" textAlignment="CENTER"
+           style="-fx-font-size: 18px;"/>
+</VBox>

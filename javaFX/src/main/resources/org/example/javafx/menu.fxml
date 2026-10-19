@@ -3,100 +3,99 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane
-        prefHeight="702.0"
-        prefWidth="600.0"
+<BorderPane
+        prefHeight="760.0"
+        prefWidth="640.0"
         xmlns="http://javafx.com/javafx/21"
         xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="org.example.javafx.MenuController">
 
-    <children>
+    <top>
+        <VBox alignment="CENTER" spacing="6" style="-fx-padding: 20 20 10 20;">
 
-        <Label
-                layoutX="129.0"
-                layoutY="30.0"
-                text="MENU PRINCIPAL"
-                textAlignment="CENTER">
+            <Label text="MENU PRINCIPAL" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="36.0"/>
+                </font>
+            </Label>
 
-            <font>
-                <Font name="System Bold" size="44.0"/>
-            </font>
+            <Label text="Qual você deseja rodar?" textAlignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
 
-        </Label>
+            <MenuButton
+                    fx:id="menuProgramas"
+                    mnemonicParsing="false"
+                    prefHeight="50.0"
+                    prefWidth="400.0"
+                    text="Escolha o programa">
 
-        <Label
-                layoutX="148.0"
-                layoutY="92.0"
-                text="Qual você deseja rodar?"
-                textAlignment="CENTER">
+                <items>
 
-            <font>
-                <Font size="30.0"/>
-            </font>
+                    <MenuItem mnemonicParsing="false" text="Verificação de Múltiplo"
+                              onAction="#onMultiplo"/>
+                    <MenuItem mnemonicParsing="false" text="Sistema de Login Simplificado"
+                              onAction="#onLogin"/>
+                    <MenuItem mnemonicParsing="false" text="Compra com Desconto"
+                              onAction="#onDesconto"/>
+                    <MenuItem mnemonicParsing="false" text="Temperatura"
+                              onAction="#onTemperatura"/>
+                    <MenuItem mnemonicParsing="false" text="Os 35 Camelos"
+                              onAction="#onCamelo"/>
+                    <MenuItem mnemonicParsing="false" text="Calculadora de Viagem"
+                              onAction="#onViagem"/>
+                    <MenuItem mnemonicParsing="false" text="Aluguel de Carro"
+                              onAction="#onAluguel"/>
 
-        </Label>
+                    <SeparatorMenuItem/>
 
-        <MenuButton
-                layoutX="132.0"
-                layoutY="178.0"
-                mnemonicParsing="false"
-                prefHeight="90.0"
-                prefWidth="341.0"
-                text="Escolha o programa">
+                    <MenuItem mnemonicParsing="false" text="Loja de Roupas"
+                              onAction="#onLoja"/>
+                    <MenuItem mnemonicParsing="false" text="Ciclismo na Trilha"
+                              onAction="#onCiclismo"/>
+                    <MenuItem mnemonicParsing="false" text="Exposição de Máscaras"
+                              onAction="#onMascaras"/>
+                    <MenuItem mnemonicParsing="false" text="Salão de Cabeleireiro"
+                              onAction="#onSalao"/>
 
-            <items>
+                    <SeparatorMenuItem/>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Verificação de Múltiplo"
-                        onAction="#onMultiplo"/>
+                    <MenuItem mnemonicParsing="false" text="Sair"
+                              onAction="#onSair"/>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Sistema de Login Simplificado"
-                        onAction="#onLogin"/>
+                </items>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Compra com Desconto"
-                        onAction="#onDesconto"/>
+                <font>
+                    <Font size="20.0"/>
+                </font>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Temperatura"
-                        onAction="#onTemperatura"/>
+            </MenuButton>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Os 35 Camelos"
-                        onAction="#onCamelo"/>
+            <Separator/>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Calculadora de Viagem"
-                        onAction="#onViagem"/>
+        </VBox>
+    </top>
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Aluguel de Carro"
-                        onAction="#onAluguel"/>
+    <center>
+        <ScrollPane fx:id="scrollConteudo" fitToWidth="true" hbarPolicy="NEVER"
+                    style="-fx-background-color: transparent;">
 
-                <MenuItem
-                        mnemonicParsing="false"
-                        text="Sair"
-                        onAction="#onSair"/>
+            <StackPane fx:id="areaConteudo" alignment="TOP_CENTER" style="-fx-padding: 10;">
+                <Label text="Escolha um programa no menu acima."
+                       style="-fx-font-size: 18px; -fx-padding: 40 0 0 0;"/>
+            </StackPane>
 
-            </items>
+        </ScrollPane>
+    </center>
 
-            <font>
-                <Font size="25.0"/>
-            </font>
-
-        </MenuButton>
-
-    </children>
-
-</AnchorPane>
+</BorderPane>
