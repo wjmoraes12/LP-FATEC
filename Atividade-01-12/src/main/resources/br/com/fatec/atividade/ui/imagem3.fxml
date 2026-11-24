@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.atividade.ui.Imagem3Controller">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Máscara" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Máscara" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Origem"/>
+                                <TextField fx:id="mascaraOrigem" promptText="Origem"/>
+                                <Label text="Material"/>
+                                <TextField fx:id="mascaraMaterial" promptText="Material"/>
+                                <Label text="Estilo"/>
+                                <TextField fx:id="mascaraEstilo" promptText="Estilo"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="mascaraTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="mascaraSaveButton" text="Cadastrar registro" onAction="#onSaveMascara" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteMascara"/>
+                                    <Button text="Limpar" onAction="#onClearMascara"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshMascara"/>
+                                </HBox>
+                                <Label fx:id="mascaraStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Colecionador" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Colecionador" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="colecionadorNome" promptText="Nome"/>
+                                <Label text="Quantidade de peças"/>
+                                <TextField fx:id="colecionadorQuantidadePecas" promptText="Quantidade de peças"/>
+                                <Label text="Especialidade"/>
+                                <TextField fx:id="colecionadorEspecialidade" promptText="Especialidade"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="colecionadorTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="colecionadorSaveButton" text="Cadastrar registro" onAction="#onSaveColecionador" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteColecionador"/>
+                                    <Button text="Limpar" onAction="#onClearColecionador"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshColecionador"/>
+                                </HBox>
+                                <Label fx:id="colecionadorStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Exposição" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Exposição" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="exposicaoNome" promptText="Nome"/>
+                                <Label text="Local"/>
+                                <TextField fx:id="exposicaoLocal" promptText="Local"/>
+                                <Label text="Quantidade de máscaras"/>
+                                <TextField fx:id="exposicaoQuantidadeMascara" promptText="Quantidade de máscaras"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="exposicaoTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="exposicaoSaveButton" text="Cadastrar registro" onAction="#onSaveExposicao" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteExposicao"/>
+                                    <Button text="Limpar" onAction="#onClearExposicao"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshExposicao"/>
+                                </HBox>
+                                <Label fx:id="exposicaoStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

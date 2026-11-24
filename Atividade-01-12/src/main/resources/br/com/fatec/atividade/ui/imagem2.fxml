@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.atividade.ui.Imagem2Controller">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Ciclista" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Ciclista" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="ciclistaNome" promptText="Nome"/>
+                                <Label text="Nível"/>
+                                <TextField fx:id="ciclistaNivel" promptText="Nível"/>
+                                <Label text="Velocidade (km/h)"/>
+                                <TextField fx:id="ciclistaVelocidade" promptText="Velocidade (km/h)"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="ciclistaTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="ciclistaSaveButton" text="Cadastrar registro" onAction="#onSaveCiclista" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteCiclista"/>
+                                    <Button text="Limpar" onAction="#onClearCiclista"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshCiclista"/>
+                                </HBox>
+                                <Label fx:id="ciclistaStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Bicicleta" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Bicicleta" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Marca"/>
+                                <TextField fx:id="bicicletaMarca" promptText="Marca"/>
+                                <Label text="Aro"/>
+                                <TextField fx:id="bicicletaAro" promptText="Aro"/>
+                                <Label text="Tipo de freio"/>
+                                <TextField fx:id="bicicletaTipoFreio" promptText="Tipo de freio"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="bicicletaTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="bicicletaSaveButton" text="Cadastrar registro" onAction="#onSaveBicicleta" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteBicicleta"/>
+                                    <Button text="Limpar" onAction="#onClearBicicleta"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshBicicleta"/>
+                                </HBox>
+                                <Label fx:id="bicicletaStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Trilha" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Trilha" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="trilhaNome" promptText="Nome"/>
+                                <Label text="Distância (km)"/>
+                                <TextField fx:id="trilhaDistancia" promptText="Distância (km)"/>
+                                <Label text="Dificuldade"/>
+                                <TextField fx:id="trilhaDificuldade" promptText="Dificuldade"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="trilhaTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="trilhaSaveButton" text="Cadastrar registro" onAction="#onSaveTrilha" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteTrilha"/>
+                                    <Button text="Limpar" onAction="#onClearTrilha"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshTrilha"/>
+                                </HBox>
+                                <Label fx:id="trilhaStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

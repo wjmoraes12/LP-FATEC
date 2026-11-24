@@ -1,0 +1,6 @@
+package br.com.fatec.atividade.model;
+
+public interface Identifiable {
+    Long getId();
+    void setId(Long id);
+}

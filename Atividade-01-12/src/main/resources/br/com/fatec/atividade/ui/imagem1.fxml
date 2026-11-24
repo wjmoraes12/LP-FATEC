@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.atividade.ui.Imagem1Controller">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Roupa" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Roupa" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Tipo"/>
+                                <TextField fx:id="roupaTipo" promptText="Tipo"/>
+                                <Label text="Cor"/>
+                                <TextField fx:id="roupaCor" promptText="Cor"/>
+                                <Label text="Preço (R$)"/>
+                                <TextField fx:id="roupaPreco" promptText="Preço (R$)"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="roupaTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="roupaSaveButton" text="Cadastrar registro" onAction="#onSaveRoupa" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteRoupa"/>
+                                    <Button text="Limpar" onAction="#onClearRoupa"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshRoupa"/>
+                                </HBox>
+                                <Label fx:id="roupaStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Manequim" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Manequim" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Material"/>
+                                <TextField fx:id="manequimMaterial" promptText="Material"/>
+                                <Label text="Cor"/>
+                                <TextField fx:id="manequimCor" promptText="Cor"/>
+                                <Label text="Roupa exibida"/>
+                                <TextField fx:id="manequimRoupa" promptText="Roupa exibida"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="manequimTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="manequimSaveButton" text="Cadastrar registro" onAction="#onSaveManequim" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteManequim"/>
+                                    <Button text="Limpar" onAction="#onClearManequim"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshManequim"/>
+                                </HBox>
+                                <Label fx:id="manequimStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Loja" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Loja" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="lojaNome" promptText="Nome"/>
+                                <Label text="Endereço"/>
+                                <TextField fx:id="lojaEndereco" promptText="Endereço"/>
+                                <Label text="Quantidade de funcionários"/>
+                                <TextField fx:id="lojaQuantidadeFuncionarios" promptText="Quantidade de funcionários"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="lojaTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="lojaSaveButton" text="Cadastrar registro" onAction="#onSaveLoja" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteLoja"/>
+                                    <Button text="Limpar" onAction="#onClearLoja"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshLoja"/>
+                                </HBox>
+                                <Label fx:id="lojaStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

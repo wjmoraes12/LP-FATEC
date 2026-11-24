@@ -17,7 +17,6 @@ public class MenuController {
     @FXML private ScrollPane scrollConteudo;
     @FXML private StackPane areaConteudo;
 
-    // Carrega o programa dentro da própria janela, na área abaixo do menu
     private void mostrarTela(String fxml, String titulo) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));

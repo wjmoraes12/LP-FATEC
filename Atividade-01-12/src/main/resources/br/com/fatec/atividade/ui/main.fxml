@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.fatec.atividade.ui.MainController" prefWidth="1180" prefHeight="780"
+            style="-fx-background-color: #f5f7fb;">
+    <top>
+        <VBox spacing="5" style="-fx-background-color: #17324d;">
+            <padding><Insets top="18" right="24" bottom="16" left="24"/></padding>
+            <Label text="Atividade OO + Banco de Dados" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <HBox spacing="8">
+                <Label text="Escopo: imagens 1 a 4" style="-fx-text-fill: #c8d8e5;"/>
+                <Label text="•" style="-fx-text-fill: #71c5e8;"/>
+                <Label fx:id="databaseStatus" text="Conectando ao banco local..." wrapText="true" style="-fx-text-fill: #c8d8e5;"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" style="-fx-background-color: #f5f7fb;">
+            <tabs>
+                <Tab text="Imagem 1 | Loja" closable="false"><content><fx:include fx:id="imagem1" source="imagem1.fxml"/></content></Tab>
+                <Tab text="Imagem 2 | Ciclismo" closable="false"><content><fx:include fx:id="imagem2" source="imagem2.fxml"/></content></Tab>
+                <Tab text="Imagem 3 | Máscaras" closable="false"><content><fx:include fx:id="imagem3" source="imagem3.fxml"/></content></Tab>
+                <Tab text="Imagem 4 | Salão" closable="false"><content><fx:include fx:id="imagem4" source="imagem4.fxml"/></content></Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

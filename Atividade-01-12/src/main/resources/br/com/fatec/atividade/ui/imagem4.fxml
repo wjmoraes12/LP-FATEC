@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.atividade.ui.Imagem4Controller">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Cliente" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Cliente" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="clienteNome" promptText="Nome"/>
+                                <Label text="Telefone"/>
+                                <TextField fx:id="clienteTelefone" promptText="Telefone"/>
+                                <Label text="Tipo de cabelo"/>
+                                <TextField fx:id="clienteTipoCabelo" promptText="Tipo de cabelo"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="clienteTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="clienteSaveButton" text="Cadastrar registro" onAction="#onSaveCliente" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteCliente"/>
+                                    <Button text="Limpar" onAction="#onClearCliente"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshCliente"/>
+                                </HBox>
+                                <Label fx:id="clienteStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Corte" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Corte" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Estilo"/>
+                                <TextField fx:id="corteEstilo" promptText="Estilo"/>
+                                <Label text="Comprimento"/>
+                                <TextField fx:id="corteComprimento" promptText="Comprimento"/>
+                                <Label text="Preço (R$)"/>
+                                <TextField fx:id="cortePreco" promptText="Preço (R$)"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="corteTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="corteSaveButton" text="Cadastrar registro" onAction="#onSaveCorte" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteCorte"/>
+                                    <Button text="Limpar" onAction="#onClearCorte"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshCorte"/>
+                                </HBox>
+                                <Label fx:id="corteStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Cabeleireiro" closable="false">
+                    <content>
+                        <HBox spacing="18" style="-fx-background-color: #f5f7fb;">
+                            <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+                            <VBox spacing="8" minWidth="280" prefWidth="310" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 16;">
+                                <Label text="Cadastro de Cabeleireiro" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #17324d;"/>
+                                <Label text="Nome"/>
+                                <TextField fx:id="cabeleireiroNome" promptText="Nome"/>
+                                <Label text="Especialidade"/>
+                                <TextField fx:id="cabeleireiroEspecialidade" promptText="Especialidade"/>
+                                <Label text="Anos de experiência"/>
+                                <TextField fx:id="cabeleireiroAnosExperiencia" promptText="Anos de experiência"/>
+                            </VBox>
+                            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                                <TableView fx:id="cabeleireiroTable" prefHeight="420" VBox.vgrow="ALWAYS"/>
+                                <HBox spacing="8">
+                                    <Button fx:id="cabeleireiroSaveButton" text="Cadastrar registro" onAction="#onSaveCabeleireiro" style="-fx-background-color: #1d6fa5; -fx-text-fill: white;"/>
+                                    <Button text="Excluir selecionado" onAction="#onDeleteCabeleireiro"/>
+                                    <Button text="Limpar" onAction="#onClearCabeleireiro"/>
+                                    <Button text="Atualizar lista" onAction="#onRefreshCabeleireiro"/>
+                                </HBox>
+                                <Label fx:id="cabeleireiroStatus" text="" wrapText="true" style="-fx-text-fill: #496274;"/>
+                            </VBox>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
